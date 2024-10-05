@@ -1,33 +1,27 @@
-class Mobile {
-    String brand;
+class Phone {
+    String model;
     int price;
-    static String name;
+    static String type;
 
     public void show() {
-        System.out.println("Brand:"+brand+"; Price:"+price+"; Name:"+name);
+        System.out.println(model+" : "+price+" : "+type);
     }
 }
-
 public class StaticVariable {
     public static void main(String[] args) {
-        Mobile.name = "Phone";
-        
-        Mobile obj1 = new Mobile();
-        obj1.brand = "Samsung";
-        obj1.price = 1500;
-        // Mobile.name = "SmartPhone";
+        Phone obj = new Phone();
+        obj.model = "Samsung";
+        obj.price = 1700;
+        // obj.type = "Phone";
 
-        Mobile obj2 = new Mobile();
-        obj2.brand = "Apple";
-        obj2.price = 1700;
-        // Mobile.name = "SmartPhone";
+        Phone obj2 = new Phone();
+        obj2.model = "Apple";
+        obj2.price = 1500;
+        // obj2.type = "Phone";
 
-        // obj1.name = "Phone";
-        // obj2.name = "Phone";
+        Phone.type = "SmartPhone";
 
-        // Mobile.name = "phone";
-
-        obj1.show();
+        obj.show();
         obj2.show();
-    }
+    }    
 }

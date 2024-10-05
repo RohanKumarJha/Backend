@@ -1,24 +1,23 @@
-class Mobile {
-    String brand;
+class Phone {
+    String model;
     int price;
-    static String name;
-    
+    static String type;
+
     static {
-        name = "SmartPhone";
+        type = "SmartPhone";
     }
 
-    public void show() {
-        System.out.println(brand+" : "+price+" : "+name);
+    public static void show(Phone obj) {
+        System.out.println(obj.model+" : "+obj.price+" : "+type);
     }
 }
 
 public class StaticBlock {
     public static void main(String[] args) {
-        Mobile obj = new Mobile();
-        obj.brand = "Apple";
+        Phone obj = new Phone();
+        obj.model = "Samsung";
         obj.price = 1700;
 
-        obj.show();
-
+        Phone.show(obj);
     }
 }

@@ -1,25 +1,21 @@
-class AdvCalc extends Calc {
-    public int mult(int a,int b) {
-        return a*b;
-    }
-    public int div(int a,int b) {
-        return a/b;
+class Grandparent {
+    String name;
+    int age;
+}
+class Parent extends Grandparent {
+    public void show() {
+        System.out.println(name+" : "+age);
     }
 }
+class Child extends Parent {
 
-class Calc {
-    public int add(int a,int b) {
-        return a+b;
-    }
-    public int sub(int a,int b) {
-        return a-b;
-    }
 }
 
 public class Inheritance {
     public static void main(String[] args) {
-        AdvCalc obj = new AdvCalc();
-        System.out.println(obj.add(20, 5));
-        System.out.println(obj.sub(20, 5));
+        Child obj = new Child();
+        obj.name = "Rohan";
+        obj.age = 26;
+        obj.show();
     }
 }

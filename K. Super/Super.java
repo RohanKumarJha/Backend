@@ -1,26 +1,24 @@
-class B {
-    B() {
-        super();
-        System.out.println("In B");
-    }
-    B(int n) {
-        System.out.println("In B int");
-    }
-}
-
-class A extends B {
+class A {
     A() {
-        super();
         System.out.println("In A");
     }
-    A(int n) {
-        super(5);
-        System.out.println("In A int");
+    A(int val) {
+        System.out.println("In A In");
     }
 }
-
+class B extends A {
+    B() {
+        super(5);
+        System.out.println("In B");
+    }
+    B(int val) {
+        System.out.println("In B In");
+    }
+}
 public class Super {
     public static void main(String[] args) {
-        A obj = new A(5);
+        new B();
+        new B(3);
+
     }
 }

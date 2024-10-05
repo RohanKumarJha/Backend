@@ -1,26 +1,26 @@
-class Mobile {
-    String brand;
+class Phone {
+    String model;
     int price;
-    static String name;
+    static String type;
 
-    public static void show(Mobile obj) {
-        System.out.println("Brand:"+obj.brand+"; Price:"+obj.price+"; Name:"+name);
+    public static void show(Phone obj) {
+        System.out.println(obj.model+" : "+obj.price+" : "+type);
     }
 }
 
 public class StaticMethod {
     public static void main(String[] args) {
-        Mobile obj1 = new Mobile();
-        obj1.brand = "Samsung";
-        obj1.price = 1500;
+        Phone obj = new Phone();
+        obj.model = "Samsung";
+        obj.price = 1700;
 
-        Mobile obj2 = new Mobile();
-        obj2.brand = "Apple";
-        obj2.price = 1700;
+        Phone obj2 = new Phone();
+        obj2.model = "Apple";
+        obj2.price = 1500;
 
-        Mobile.name = "SmartPhone";
+        Phone.type = "SmartPhone";
 
-        Mobile.show(obj1);
-        Mobile.show(obj2);
+        Phone.show(obj);
+        Phone.show(obj2);
     }
 }
