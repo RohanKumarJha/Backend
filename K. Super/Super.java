@@ -2,23 +2,32 @@ class A {
     A() {
         System.out.println("In A");
     }
-    A(int val) {
-        System.out.println("In A In");
+    A(int num) {
+        System.out.println("In A int");
     }
 }
+
 class B extends A {
     B() {
-        super(5);
+        super(6);
         System.out.println("In B");
     }
-    B(int val) {
-        System.out.println("In B In");
+    B(int num) {
+        System.out.println("In B int");
     }
 }
+
+class C extends B {
+    C() {
+        System.out.println("In C");
+    }
+    C(int num) {
+        System.out.println("In C int");
+    }
+}
+
 public class Super {
     public static void main(String[] args) {
-        new B();
-        new B(3);
-
+        C obj = new C(6);
     }
 }

@@ -25,15 +25,9 @@ class Mobile {
 public class Encapsulation {
     public static void main(String[] args) {
         Mobile obj = new Mobile();
-        obj.setModel("Samsung");
+        obj.setModel("Apple");
         obj.setPrice(1700);
         obj.setType("SmartPhone");
         System.out.println(obj.getModel()+" : "+obj.getPrice()+" : "+obj.getType());
-
-        Mobile obj2 = new Mobile();
-        obj2.setModel("Apple");
-        obj2.setPrice(2000);
-        obj2.setType("SmartPhone");
-        System.out.println(obj2.getModel()+" : "+obj2.getPrice()+" : "+obj2.getType());
     }
 }
